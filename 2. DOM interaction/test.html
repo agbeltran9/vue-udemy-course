@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <p>{{ title }} - <a v-bind:href="link">Google</a></p>
+            <p v-html="template"></p>
+        </div>
+        <script>
+                new Vue({
+                    el: '#app',
+                    data: {
+                        title: 'First test from Vue.js',
+                        link: "https://www.google.com",
+                        template: "<b> LOL </b>"
+                    },
+                    methods: {
+                        changeTitle: function(event){
+                            this.title = event.target.value;
+                        }
+                    }
+                });                
+        </script>
+    </body>    
+</html>
